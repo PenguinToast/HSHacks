@@ -1,9 +1,13 @@
 function RaicerComponent() {
     this.image = new Image();
+    this.name = "default";
+    this.description = "default";
+    this.angle = 0;
 }
 
-function RaicerComponent.prototype.draw = function(context) {
+RaicerComponent.prototype.draw = function(context) {
     if (this.image.complete) {
-	context.drawImage(this.image, 50, 50);
+	context.rotate(this.angle);
+	context.drawImage(this.image, -this.image.width / 2, -this.image.width / 2);
     }
 };

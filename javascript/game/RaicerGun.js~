@@ -4,7 +4,7 @@ function RaicerTread() {
     this.maxAcceleration = 10; // Same as above
     this.name = "defaultTreadName";
     this.description = "defaultTreadDescription";
-    this.image.src = "res/defaulttreads.png";
+    this.image = "../res/defaultTread.png";
 }
 
 RaicerTread.prototype = new RaicerComponent();

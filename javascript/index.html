@@ -11,15 +11,22 @@
     <!-- Coding Frame -->
     <textarea id="codearea" width="700" height="500"></textarea>
     <script src="edit/edit.js"></script>
+    
+    <button id="submitButton" onclick="submitCode()">Submit Code</button>
+    <button id="runButton" onclick="toggleRunning(this)">Start</button>
 
     <!-- Game Frame -->
-    
+    <div>
     <canvas id="gameCanvas" width="700" height="500"></canvas>
     <script src="game/util/Vector2.js"></script>
     <script src="game/RaicerComponent.js"></script>
+    <script src="game/RaicerTread.js"></script>
+    <script src="game/RaicerBody.js"></script>
+    <script src="game/RaicerRadar.js"></script>
+    <script src="game/RaicerGun.js"></script>
     <script src="game/raicer.js"></script>
 
     <script src="script.js"></script>
-    
+    </div>
   </body>
 </html>

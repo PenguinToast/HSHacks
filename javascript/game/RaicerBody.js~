@@ -1,10 +1,10 @@
-function RaicerTread() {
+function RaicerBody() {
     RaicerComponent.call(this);
     this.maxSpeed = 100; // Not sure about units yet
     this.maxAcceleration = 10; // Same as above
     this.name = "defaultTreadName";
     this.description = "defaultTreadDescription";
-    this.image.src = "res/defaulttreads.png";
+    this.image = "../res/defaultTread.png";
 }
 
 RaicerTread.prototype = new RaicerComponent();
