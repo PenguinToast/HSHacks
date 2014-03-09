@@ -1,6 +1,4 @@
-function Track() {
-
-}
+var Track = Class.create();
 Track.prototype =  {
 	var tracklength;
 	init: function(trackLength)

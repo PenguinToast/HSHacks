@@ -63,6 +63,9 @@ function validateCode(doc) {
 }
 
 function submitCode() {    
+    if (frame != null) {
+	document.body.removeChild(frame);
+    }
     frame = document.createElement("iframe");
     frame.style.display = 'none';
     document.body.appendChild(frame);
