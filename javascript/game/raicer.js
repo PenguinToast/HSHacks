@@ -1,5 +1,5 @@
 function Raicer() {
-    this.position = new Vector2();
+    this.position = new Box2D.Common.Math.b2Vec2();
     this.body = RaicerBody.types[0];
     this.gun = RaicerGun.types[0];
     this.tread = RaicerTread.types[0];
