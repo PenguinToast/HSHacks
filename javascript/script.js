@@ -1,3 +1,9 @@
+// Facebook
+var firebase = new Firebase("https://coderaicing.firebaseio.com");
+var auth = new FirebaseSimpleLogin(firebase, function (error, user) {
+
+});
+// auth.login("facebook");
 
 // Game Logic
 var canvas = document.getElementById("gameCanvas");
@@ -25,6 +31,8 @@ function render(dt) {
 	frame.contentWindow.update();
     }
 }
+
+testRaicer.implementPhysics();
 
 // Game loop
 function timestamp() {

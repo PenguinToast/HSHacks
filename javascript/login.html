@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Code rAIcing: Facebook Login</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="FB.css">
+    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.6/firebase.js'></script>
+    <script type='text/javascript'
+            src='https://cdn.firebase.com/js/simple-login/1.3.0/firebase-simple-login.js'>
+    </script>
+  </head>
+  <body>
+    <div id="body">
+      <div id="header">
+        <a href="/login.html"><img id="FB" src="FB.png"></a>
+        <a href="index.html"><img id = "titles" src = "ProfileTitle.PNG"></a>
+      </div>
+      <script>
+	var firebase = new Firebase("https://coderaicing.firebaseio.com");
+	var auth = new FirebaseSimpleLogin(firebase, function(error, user) {
+	  if (error) {
+	    alert("There was an error logging in. Please try again.");
+	  } else if (user) {
+	    localStorage.setItem("facebookOAuth", user.accessToken);
+	  } else {
+
+	  }
+	});
+	var oAuth = localStorage.getItem("facebookOAuth");
+	if (oAuth == null) {
+	  auth.login("facebook", {
+	    rememberMe: true
+	  });
+	} else {
+	  auth.login("facebook", {
+	    access_token: oAuth,
+	    rememberMe: true
+	  });
+
+	}
+      </script>
+    </div>
+  </body>
+</html>
+
+
+
